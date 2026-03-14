@@ -7,9 +7,9 @@ A visual PyTorch pipeline editor. Build, train and run image classification mode
 ## What it does
 
 - **Visual pipeline** - drag nodes onto a canvas, connect them with wires, and ML Forge generates and runs the training code for you
-- **Three-tab workflow** - Data Prep → Model → Training
+- **Three-tab workflow** - Data Prep -> Model -> Training
 - **Live training** - watch loss curves update in real time, save checkpoints, run inference on your trained model
-- **Export** - generate a clean, standalone `train.py` script you can run anywhere
+- **Export** - export projects into clean PyTorch
 
 ---
 
@@ -34,9 +34,9 @@ git clone https://github.com/yourname/ml-forge
 python main.py
 ```
 
-Or use a template to skip setup:
+Use the templates (file -> templates) to access premade projects:
 
-**File → Templates → MNIST Classifier**
+**File -> Templates -> MNIST Classifier**
 
 Then press **RUN** in the toolbar.
 
@@ -53,9 +53,9 @@ Then press **RUN** in the toolbar.
 
 ### 2. Model tab
 
-- Start with an **Input** node — shape is auto-filled from your dataset
+- Start with an **Input** node - shape is auto-filled from your dataset
 - Add layers: Linear, Conv2D, ReLU, BatchNorm2D, Flatten, Dropout, etc.
-- End with an **Output** node — num classes is auto-filled from your dataset
+- End with an **Output** node - num classes is auto-filled from your dataset
 - Connect nodes by dragging from an output pin to an input pin
 - `in_features` and `in_channels` auto-fill when you connect layers
 - After a Flatten node, the next Linear's `in_features` is calculated automatically
@@ -65,10 +65,10 @@ Then press **RUN** in the toolbar.
 Add these four nodes from the palette and wire them up:
 
 ```
-DataLoaderBlock.images  →  ModelBlock.images
-ModelBlock.predictions  →  Loss.pred
-DataLoaderBlock.labels  →  Loss.target
-Loss.loss               →  Optimizer.params
+DataLoaderBlock.images  ->  ModelBlock.images
+ModelBlock.predictions  ->  Loss.pred
+DataLoaderBlock.labels  ->  Loss.target
+Loss.loss               ->  Optimizer.params
 ```
 
 Configure epochs, device, checkpointing and early stopping in the right panel, then press **RUN**.
@@ -101,19 +101,19 @@ Configure epochs, device, checkpointing and early stopping in the right panel, t
 
 ## Inference
 
-After training, open **Run → Inference**, browse to your checkpoint (`.pth`), and click **Run Inference** to sample from the test set and see top-k predictions.
+After training, open **Run -> Inference**, browse to your checkpoint (`.pth`), and click **Run Inference** to sample from the test set and see top-k predictions.
 
 ---
 
 ## Metrics
 
-Open **Run → Metrics** (or click the **METRICS** button) to see a summary of your training run: final loss, best validation accuracy, fit diagnosis, and loss/accuracy curves.
+Click the **METRICS** button to see a summary of your training run: final loss, best validation accuracy, fit diagnosis, and loss/accuracy curves, you may also see the curves on the right training panel. 
 
 ---
 
 ## Saving and loading
 
-Projects are saved as `.mlf` files (JSON). Use **File → Save / Save As** or `Ctrl+S`.
+Projects are saved as `.mlf` files (JSON). Use **File -> Save / Save As** or `Ctrl+S`.
 
 ---
 
