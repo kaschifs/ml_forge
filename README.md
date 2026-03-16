@@ -12,21 +12,6 @@ A visual PyTorch pipeline editor. Build, train and run image classification mode
 - **Export** - export projects into clean PyTorch
 
 ---
-## Installing
-
-To install MLForge, enter the following in your command prompt
-
-```
-pip install zaina-ml-forge
-```
-
-Then
-
-```
-ml-forge
-```
-
-
 
 ## Requirements
 **IMPORTANT**: PyTorch must be preinstalled for training, it is not installed as a dependency. 
@@ -43,18 +28,30 @@ GPU training is automatic if CUDA is available. CPU and Apple MPS are also suppo
 
 ---
 
-## Quick start
+## Quick Start
+
+To install MLForge, enter the following in your command prompt
 
 ```
-git clone https://github.com/yourname/ml-forge
+pip install zaina-ml-forge
+```
+
+Then
+
+```
+ml-forge
+```
+
+
+---
+
+## Cloning
+
+```
+git clone https://github.com/zaina-ml/ml-forge
 python main.py
 ```
 
-Use the templates (file -> templates) to access premade projects:
-
-**File -> Templates -> MNIST Classifier**
-
-Then press **RUN** in the toolbar.
 
 ---
 
