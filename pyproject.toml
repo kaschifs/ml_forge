@@ -4,11 +4,19 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "zaina-ml-forge"
+<<<<<<< HEAD
 version = "1.0"
 description = "Visual Drag-and-drop Machine Learning Trainer"
 readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.11"
+=======
+version = "1.0.0"
+description = "Visual Drag-and-drop Machine Learning Trainer"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">3.10"
+>>>>>>> 767283493b5e840a5b3d6c5f9acf8bcad704a2e0
 authors = [
     {name = "zain-a"}
 ]

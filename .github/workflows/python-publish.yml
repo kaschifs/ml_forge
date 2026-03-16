@@ -7,13 +7,24 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+<<<<<<< HEAD
     steps:
       - uses: actions/checkout@v4
 
+=======
+    
+    steps:
+      - uses: actions/checkout@v4
+    
+      - name: Debug - show pyproject.toml
+        run: cat pyproject.toml
+    
+>>>>>>> 767283493b5e840a5b3d6c5f9acf8bcad704a2e0
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+<<<<<<< HEAD
 
       - name: Install build tools
         run: pip install --upgrade setuptools build twine
@@ -21,8 +32,21 @@ jobs:
       - name: Build package
         run: python -m build
 
+=======
+    
+      - name: Install build tools
+        run: pip install --upgrade setuptools build twine
+    
+      - name: Build package
+        run: python -m build
+    
+>>>>>>> 767283493b5e840a5b3d6c5f9acf8bcad704a2e0
       - name: Publish to PyPI
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+<<<<<<< HEAD
         run: twine upload dist/*
+=======
+        run: twine upload --verbose dist/*
+>>>>>>> 767283493b5e840a5b3d6c5f9acf8bcad704a2e0
