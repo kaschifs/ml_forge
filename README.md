@@ -1,7 +1,7 @@
 # ML Forge
 
 A visual PyTorch pipeline editor. Build, train and run image classification models without writing code.
-![ML Forge screenshot](assets/showcase.gif)
+![ML Forge screenshot](ml_forge/assets/showcase.gif)
 ---
 
 ## What it does
