@@ -49,7 +49,7 @@ ml-forge
 
 ```
 git clone https://github.com/zaina-ml/ml-forge
-python main.py
+python -m ml_forge
 ```
 
 
