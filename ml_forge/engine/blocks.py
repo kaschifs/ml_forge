@@ -1,7 +1,6 @@
 """
 blocks.py
 Block (node type) definitions and lookup helpers.
-Pure data — no DearPyGui imports, no state imports.
 """
 
 from typing import Optional
